@@ -18,7 +18,6 @@ md5sums=('b43009633862e2693e6e2d6d0bd039ba'
          '52d7774f2997c16a7e6b7672ae40d6ca'
          'ca9ee88f1b527db010980cdacb77e371')
 
-
 build() {
   cd "$srcdir"
   install -D -m0644 selenium-server-standalone-$pkgver.jar \
