@@ -4,7 +4,7 @@
 pkgname=selenium-server-standalone
 pkgver=2.20.0
 pkgrel=2
-pkgdesc="selenium server"
+pkgdesc="Test automation server for web applications"
 arch=(any)
 url="http://seleniumhq.org/"
 license=('APACHE')
