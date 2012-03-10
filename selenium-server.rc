@@ -4,6 +4,7 @@ daemon_name=selenium-server
 
 SELENIUM_SERVER_USER=nobody
 
+. /etc/profile
 . /etc/rc.conf
 . /etc/rc.d/functions
 . /etc/conf.d/$daemon_name.conf
@@ -20,7 +21,7 @@ case "$1" in
     if [ -z "$PID" ]; then
       [ -f /var/run/$daemon_name.pid ] && rm -f /var/run/$daemon_name.pid
       # RUN
-      su -c "java -jar /usr/share/selenium-server/selenium-server-standalone.jar $SELENIUM_SERVER_ARGS >/dev/null 2>/dev/null &" - $SELENIUM_SERVER_USER
+      su -c "$JAVA_HOME/bin/java -jar /usr/share/selenium-server/selenium-server-standalone.jar $SELENIUM_SERVER_ARGS >/dev/null 2>/dev/null &" - $SELENIUM_SERVER_USER
       #
       if [ $? -gt 0 ]; then
         stat_fail
