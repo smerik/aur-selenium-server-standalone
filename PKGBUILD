@@ -15,7 +15,7 @@ source=(http://selenium.googlecode.com/files/selenium-server-standalone-$pkgver.
 	selenium-server.rc)
 noextract=(selenium-server-standalone-$pkgver.jar)
 md5sums=('b43009633862e2693e6e2d6d0bd039ba'
-         '52d7774f2997c16a7e6b7672ae40d6ca'
+         '7bee6e2fc552545326308483ee971b8f'
          '357a5bcd7966bce372bc776e834ff80b')
 
 build() {
