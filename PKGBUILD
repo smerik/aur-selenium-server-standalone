@@ -1,6 +1,6 @@
 pkgname=selenium-server-standalone
 pkgver=2.20.0
-pkgrel=1
+pkgrel=2
 pkgdesc="selenium server"
 arch=(any)
 url="http://seleniumhq.org/"
