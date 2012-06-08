@@ -8,7 +8,7 @@ pkgdesc="Test automation server for web applications"
 arch=(any)
 url="http://seleniumhq.org/"
 license=('APACHE')
-depends=(java-runtime)
+depends=('java-runtime>=6')
 backup=(etc/conf.d/selenium-server.conf)
 source=(http://selenium.googlecode.com/files/selenium-server-standalone-$pkgver.jar
 	selenium-server.conf.d
