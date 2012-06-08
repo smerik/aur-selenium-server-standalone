@@ -3,7 +3,7 @@
 # Contributor: Sergej Pupykin <arch at sergej dot pp dot ru>
 pkgname=selenium-server-standalone
 pkgver=2.23.1
-pkgrel=1
+pkgrel=2
 pkgdesc="Test automation server for web applications"
 arch=(any)
 url="http://seleniumhq.org/"
