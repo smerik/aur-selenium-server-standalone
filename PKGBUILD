@@ -11,8 +11,8 @@ license=('APACHE')
 depends=('java-runtime>=6')
 backup=(etc/conf.d/selenium-server.conf)
 source=(http://selenium.googlecode.com/files/selenium-server-standalone-$pkgver.jar
-	selenium-server.conf.d
-	selenium-server.rc)
+        selenium-server.conf.d
+        selenium-server.rc)
 noextract=(selenium-server-standalone-$pkgver.jar)
 md5sums=('da457483b0af9bdc6951c4940d106b9a'
          '7bee6e2fc552545326308483ee971b8f'
@@ -21,7 +21,7 @@ md5sums=('da457483b0af9bdc6951c4940d106b9a'
 build() {
   cd "$srcdir"
   install -D -m0644 selenium-server-standalone-$pkgver.jar \
-	$pkgdir/usr/share/selenium-server/selenium-server-standalone.jar
+    $pkgdir/usr/share/selenium-server/selenium-server-standalone.jar
   install -D -m0644 selenium-server.conf.d $pkgdir/etc/conf.d/selenium-server.conf
   install -D -m0755 selenium-server.rc $pkgdir/etc/rc.d/selenium-server
 }
