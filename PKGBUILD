@@ -5,15 +5,15 @@ pkgname=selenium-server-standalone
 pkgver=2.23.1
 pkgrel=3
 pkgdesc="Test automation server for web applications"
-arch=(any)
+arch=('any')
 url="http://seleniumhq.org/"
 license=('APACHE')
 depends=('java-runtime>=6')
-backup=(etc/conf.d/selenium-server.conf)
-source=(http://selenium.googlecode.com/files/selenium-server-standalone-$pkgver.jar
-        selenium-server.conf.d
-        selenium-server.rc)
-noextract=(selenium-server-standalone-$pkgver.jar)
+backup=('etc/conf.d/selenium-server.conf')
+source=("http://selenium.googlecode.com/files/selenium-server-standalone-$pkgver.jar"
+        'selenium-server.conf.d'
+        'selenium-server.rc')
+noextract=("selenium-server-standalone-$pkgver.jar")
 md5sums=('da457483b0af9bdc6951c4940d106b9a'
          '7bee6e2fc552545326308483ee971b8f'
          '357a5bcd7966bce372bc776e834ff80b')
