@@ -1,0 +1,140 @@
+{
+  /* Read http://code.google.com/p/selenium/wiki/DesiredCapabilities for more info. */
+  "capabilities": [
+    {
+      /* The name of the browser being used; should be one of
+         {android|chrome|firefox|htmlunit|internet explorer|iPhone|iPad|opera}. */
+      "browserName": "firefox",
+
+      /* The browser version, or empty string if unknown. */
+      "version": "3.6",
+
+      /* A key specifying which platform the browser is running on. This value
+         should be one of {WINDOWS|XP|VISTA|MAC|LINUX|UNIX}. When requesting a
+         new session, the client may specify ANY to indicate any available
+         platform may be used. */
+      "platform": "LINUX",
+
+      /* Whether the session supports executing user supplied JavaScript in the
+         context of the current page. */
+      "javascriptEnabled": true,
+
+      /* Whether the session supports taking screenshots of the current page. */
+      "takesScreenshot": true,
+
+      /* Whether the session can interact with modal popups, such as
+         window.alert and window.confirm. */
+      "handlesAlerts": true,
+
+      /* Whether the session can interact database storage. */
+      "databaseEnabled": true,
+
+      /* Whether the session can set and query the browser's location context. */
+      "locationContextEnabled": true,
+
+      /* Whether the session can interact with the application cache. */
+      "applicationCacheEnabled": true,
+
+      /* Whether the session can query for the browser's connectivity and
+         disable it if desired. */
+      "browserConnectionEnabled": true,
+
+      /* Whether the session supports CSS selectors when searching for elements. */
+      "cssSelectorsEnabled": true,
+
+      /* Whether the session supports interactions with storage objects.
+         ( http://www.w3.org/TR/2009/WD-webstorage-20091029/ ) */
+      "webStorageEnabled": true,
+
+      /* Whether the session can rotate the current page's current layout
+         between portrait and landscape orientations (only applies to mobile
+         platforms). */
+      "rotatable": false,
+
+      /* Whether the session should accept all SSL certs by default. */
+      "acceptSslCerts": true,
+
+      /* Whether the session is capable of generating native events when
+         simulating user input. */
+      "nativeEvents": true,
+
+      /* Details of any proxy to use. If no proxy is specified, whatever the
+         system's current or default state is used. */
+      "proxy": {
+        /* (Required) The type of proxy being used. Possible values are:
+           autodetect - Proxy autodetection, probably with WPAD
+           direct     - A direct connection - no proxy in use
+           manual     - Manual proxy settings configured, e.g. setting a proxy
+                        for HTTP, a proxy for FTP, etc
+           pac        - Proxy autoconfiguration from a URL
+           system     - Use system settings */
+        "proxyType": "direct",
+
+        /* (Required if proxyType == pac, Ignored otherwise.) Specifies the URL
+           to be used for proxy autoconfiguration. */
+        "proxyAutoconfigUrl": "http://hostname.com:1234/pacfile",
+
+        /* (Optional, Ignored if proxyType != manual)
+           Specifies the proxies to be used for FTP, HTTP and HTTPS requests
+           respectively. Behaviour is undefined if a request is made, where the
+           proxy for the particular protocol is undefined. */
+        "ftpProxy": "hostname.com:1234",
+        "httpProxy": "hostname.com:1234",
+        "sslProxy": "hostname.com:1234"
+      },
+
+
+      /* -- GRID-specific -- */
+      /* Which protocol to use; should be one of {WebDriver|Selenium}. */
+      "seleniumProtocol": "WebDriver",
+
+      /* Maximum number of instances to allow to connect to grid. */
+      "maxInstances": 3
+    }
+  ],
+  "configuration":
+  {
+   /* The class that will be used to represent the node. By default:
+      org.openqa.grid.selenium.proxy.SeleniumRemoteProxy  (Selenium1 / RC)
+      org.openqa.grid.selenium.proxy.WebDriverRemoteProxy (Selenium2 / WebDriver) */
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+
+    /* The port the node will listen on. Default to 4444. */
+    "port": 5555,
+
+    /* How often the hub checks if the node is still alive. */
+    "nodePolling": 2000,
+
+    /* The timeout in seconds before the hub automatically ends a test that
+       hasn't had any activity than XX seconds. The browser will be released for
+       another test to use. This typically takes care of the client crashes. */
+    "nodeTimeout": 120,
+
+    /* The hub location. */
+    "hubHost": "127.0.0.1",
+
+    /* The port the hub listens on. */
+    "hubPort": 4444,
+
+    /* Interval (in ms) for the node will try to register itself again. Allow to
+       restart the hub without having to restart the nodes. */
+    "registerCycle": 10000,
+
+    "register": true,
+
+    /* How long (in ms) it wil take for the node to disappear from the hub when
+       the node remains down. Default is 1 minute. */
+    "unregisterIfStillDownAfter": 60000,
+
+    /* Interval (in ms) a proxy will check for a timed out thread. */
+    "cleanUpCycle": 2000,
+
+    /* Controls how long (in seconds) the client is allowed to be gone before
+       the session is reclaimed. */
+    "timeout": 30000,
+
+    /* Max number of tests that can run at the same time on the node,
+       independently of the browser used. */
+    "maxSession": 1
+  }
+}

@@ -1,0 +1,54 @@
+{
+  /* Specifies the host. Usually not needed and determined automatically. For
+   * exotic network configuration, network with VPN, specifying the host might
+   * be necessary. */
+  "host": null,
+
+  /* The port the hub will listen on. Default to 4444. */
+  "port": 4444,
+
+  /* Interval (in ms) a proxy will check for a timed out thread. Default to
+     5 seconds. */
+  "cleanUpCycle": 5000,
+
+  /* Controls how long (in ms) the client is allowed to be gone before the
+   * session is reclaimed. Default to 300000. */
+  "timeout": 300000,
+
+  /* Controls how long (in seconds) the browser is allowed to hang. Should be
+     higher than the socket lock timeout (45 seconds).
+     Please note that this is intended as a backup timeout mechanism when the
+     ordinary timeout mechanism fails, which should be used mostly in
+     grid/server environments to ensure that crashed/lost processes do not stay
+     around for too long, polluting the runtime environment. Default to 0. */
+  "browserTimeout": 0,
+
+  /* The time (in ms) after which a new test waiting for a node to become
+   * available will time out. When that happens, the test will throw an
+   * exception before starting a browser. */
+  "newSessionWaitTimeout": -1,
+
+  /* If true, the hub will reject test requests right away if no proxy is
+   * currently registered that can host that capability. Set it to false to
+   * have the request queued until a node supporting the capability is added to
+   * the grid. Default to true. */
+  "throwOnCapabilityNotPresent": true,
+
+  /* A class implementing the CapabilityMatcher interface. Specify the logic the
+   * hub will follow to define if a request can be assigned to a node. Change
+   * this class if you want to have the matching process use regular expression
+   * instead of exact match for the version of the browser for instance. All the
+   * nodes of a grid instance will use the same matcher, defined by the registry.
+   * Default to org.openqa.grid.internal.utils.DefaultCapabilityMatcher. */
+  "capabilityMatcher": "org.openqa.grid.internal.utils.DefaultCapabilityMatcher",
+
+  /* A class implementing the Prioritizer interface. Specify a custom
+   * prioritizer if you need the grid to process the tests from the CI, or the
+   * IE tests first for instance. Default to null (no priority = FIFO). */
+  "prioritizer": null,
+
+  /* <com.mycompany.MyServlet,com.mycompany.MyServlet2> to register a new
+   * servlet on the hub. The servlet will accessible under the path
+   * /grid/admin/MyServlet /grid/admin/MyServlet2 */
+  "servlets" : []
+}
