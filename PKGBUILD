@@ -1,6 +1,7 @@
 # Maintainer: Erik van der Kolk <developer at smerik dot nl>
 # Contributor: Tim Diels <limyreth at gmail dot com>
 # Contributor: Sergej Pupykin <arch at sergej dot pp dot ru>
+# Contributor: Nathaniel Harward <nharward at gmail dot com>
 pkgname=selenium-server-standalone
 pkgver=2.23.1
 pkgrel=3
