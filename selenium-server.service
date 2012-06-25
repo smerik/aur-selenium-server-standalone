@@ -4,7 +4,6 @@ Description=Selenium Standalone Server
 [Service]
 EnvironmentFile=/etc/conf.d/selenium-server.conf
 ExecStart=/usr/bin/java -jar /usr/share/selenium-server/selenium-server-standalone.jar ${SELENIUM_SERVER_ARGS}
-ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 User=nobody
 
