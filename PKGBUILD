@@ -2,7 +2,7 @@
 # Contributor: Tim Diels <limyreth at gmail dot com>
 # Contributor: Sergej Pupykin <arch at sergej dot pp dot ru>
 pkgname=selenium-server-standalone
-pkgver=2.25.0
+pkgver=2.26.0
 pkgrel=1
 pkgdesc="Test automation server for web applications"
 arch=('any')
@@ -14,7 +14,7 @@ source=("http://selenium.googlecode.com/files/selenium-server-standalone-$pkgver
         'selenium-server.conf.d'
         'selenium-server.rc')
 noextract=("selenium-server-standalone-$pkgver.jar")
-md5sums=('23a022285570984b75697b432d5b76f9'
+md5sums=('0bd895a2e508b2eac6cfc8cd22048d8e'
          '7bee6e2fc552545326308483ee971b8f'
          '68f3c06be724919d8860da92053bdcb4')
 
