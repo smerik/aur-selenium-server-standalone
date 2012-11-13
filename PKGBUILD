@@ -19,7 +19,7 @@ noextract=("selenium-server-standalone-$pkgver.jar")
 md5sums=('0bd895a2e508b2eac6cfc8cd22048d8e'
          'e131aeac10172f338bba243652787a3f'
          '68f3c06be724919d8860da92053bdcb4'
-         '37a29c5937b5c14e9e8a140b8e530b46')
+         'db4017cb607a83407733b25b1aeda2d9')
 
 build() {
   cd "$srcdir"
@@ -28,4 +28,6 @@ build() {
   install -D -m0644 selenium-server.conf.d $pkgdir/etc/conf.d/selenium-server.conf
   install -D -m0755 selenium-server.rc $pkgdir/etc/rc.d/selenium-server
   install -D -m0644 selenium-server.service $pkgdir/usr/lib/systemd/system/selenium-server.service
+  install -m755 -d $pkgdir/usr/bin/
+  ln -s $JAVA_HOME/bin/java ${pkgdir}/usr/bin/selenium-server-java
 }
