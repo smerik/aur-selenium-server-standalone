@@ -19,7 +19,7 @@ noextract=("selenium-server-standalone-$pkgver.jar")
 md5sums=('0bd895a2e508b2eac6cfc8cd22048d8e'
          '7bee6e2fc552545326308483ee971b8f'
          '68f3c06be724919d8860da92053bdcb4'
-         'c3f4a1fddd2c553a9c17fd989aa2a78f')
+         '37a29c5937b5c14e9e8a140b8e530b46')
 
 build() {
   cd "$srcdir"
