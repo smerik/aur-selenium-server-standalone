@@ -17,7 +17,7 @@ source=("http://selenium.googlecode.com/files/selenium-server-standalone-$pkgver
         'selenium-server.service')
 noextract=("selenium-server-standalone-$pkgver.jar")
 md5sums=('0bd895a2e508b2eac6cfc8cd22048d8e'
-         '7bee6e2fc552545326308483ee971b8f'
+         'e131aeac10172f338bba243652787a3f'
          '68f3c06be724919d8860da92053bdcb4'
          '37a29c5937b5c14e9e8a140b8e530b46')
 
