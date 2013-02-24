@@ -2,9 +2,10 @@
 # Contributor: Tim Diels <limyreth at gmail dot com>
 # Contributor: Sergej Pupykin <arch at sergej dot pp dot ru>
 # Contributor: Nathaniel Harward <nharward at gmail dot com>
+# Contributor: Martin Blumenstingl <martin.blumenstingl at googlemail dot com>
 pkgname=selenium-server-standalone
 pkgver=2.28.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Test automation server for web applications"
 arch=('any')
 url="http://seleniumhq.org/"
@@ -19,7 +20,7 @@ noextract=("selenium-server-standalone-$pkgver.jar")
 md5sums=('a75b9f58a61490f1abe676c710b68f16'
          'e131aeac10172f338bba243652787a3f'
          '68f3c06be724919d8860da92053bdcb4'
-         'db4017cb607a83407733b25b1aeda2d9')
+         '77b72da5dc04ef9220923b83ad95d4a0')
 
 build() {
   cd "$srcdir"
